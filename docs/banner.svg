@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Model Relay Station</title>
+  <desc id="desc">A dark technical banner showing one gateway routing requests to multiple model providers.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#0c1d34"/>
+      <stop offset="1" stop-color="#071827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7dd3fc" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+  <circle cx="1030" cy="30" r="250" fill="#4f46e5" opacity=".08"/>
+  <circle cx="155" cy="320" r="230" fill="#06b6d4" opacity=".07"/>
+  <g transform="translate(76 61)">
+    <rect width="72" height="72" rx="20" fill="#0f2941" stroke="#22d3ee" stroke-opacity=".55"/>
+    <path d="M17 36h38M36 17v38M23 23l26 26M49 23L23 49" stroke="url(#accent)" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+  </g>
+  <text x="76" y="190" fill="#f8fafc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-1">Model Relay Station</text>
+  <text x="78" y="230" fill="#9fb5ca" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19">One compatible endpoint. Multiple model providers. Resilient routing.</text>
+  <g transform="translate(790 72)" fill="none" stroke-linecap="round">
+    <path d="M72 88h85M157 88l70-61M157 88l70 61" stroke="#38bdf8" stroke-width="3" opacity=".75"/>
+    <circle cx="72" cy="88" r="38" fill="#102b43" stroke="#22d3ee" stroke-width="2"/>
+    <circle cx="227" cy="27" r="25" fill="#1c2347" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="252" cy="88" r="25" fill="#1c2347" stroke="#818cf8" stroke-width="2"/>
+    <circle cx="227" cy="149" r="25" fill="#1c2347" stroke="#818cf8" stroke-width="2"/>
+    <path d="M157 88h70" stroke="#38bdf8" stroke-width="3" opacity=".75"/>
+    <text x="72" y="94" text-anchor="middle" fill="#e0f2fe" stroke="none" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="700">API</text>
+    <text x="227" y="32" text-anchor="middle" fill="#e0e7ff" stroke="none" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">DS</text>
+    <text x="252" y="93" text-anchor="middle" fill="#e0e7ff" stroke="none" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">GLM</text>
+    <text x="227" y="154" text-anchor="middle" fill="#e0e7ff" stroke="none" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12">QW</text>
+  </g>
+</svg>

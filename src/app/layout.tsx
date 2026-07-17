@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ai-relay",
-  description: "OpenAI compatible AI model relay station"
+  title: "Model Relay Station",
+  description: "A self-hosted, OpenAI-compatible gateway for multiple LLM providers"
 };
 
 export default function RootLayout({
