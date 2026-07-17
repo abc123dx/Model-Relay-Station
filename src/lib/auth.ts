@@ -13,12 +13,18 @@ function base64url(input: string | Buffer) {
   return Buffer.from(input).toString("base64url");
 }
 
+function requiredSecret(name: "ADMIN_PASSWORD" | "ADMIN_SESSION_SECRET") {
+  const value = process.env[name]?.trim();
+  if (!value) {
+    throw new Error(
+      `${name} is required. Copy .env.example to .env.local and set a strong value.`
+    );
+  }
+  return value;
+}
+
 function secret() {
-  return (
-    process.env.ADMIN_SESSION_SECRET ||
-    process.env.ADMIN_PASSWORD ||
-    "ai-relay-development-secret"
-  );
+  return requiredSecret("ADMIN_SESSION_SECRET");
 }
 
 function sign(value: string) {
@@ -26,7 +32,7 @@ function sign(value: string) {
 }
 
 export function verifyAdminPassword(password: string) {
-  const configured = process.env.ADMIN_PASSWORD || "admin123";
+  const configured = requiredSecret("ADMIN_PASSWORD");
   const left = Buffer.from(password);
   const right = Buffer.from(configured);
   if (left.length !== right.length) return false;
